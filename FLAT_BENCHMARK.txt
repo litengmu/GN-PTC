@@ -1,0 +1,50 @@
+MATPOWER flat-start comparison
+
+Run from the package folder in MATLAB:
+
+    [wide,summary,files] = main_matpower_flat;
+
+For a small check:
+
+    cfg.CaseNames = {'case9','case14'};
+    [wide,summary,files] = main_matpower_flat(cfg);
+
+The default set contains the same 72 MATPOWER cases as the previous
+flat-start benchmark, listed in MATPOWER_CASES.txt. Cases are stored as MAT
+data under benchmark_cases; the case9mod random-start example is separate.
+Methods: PTC, GN, GN_hyst_back and Ipopt_MA57. Each method receives the same
+flat initial point for each case. The Ipopt objective remains constant zero.
+Restoration variants are omitted. main_matpower_flat.m is editable;
+internal batch drivers and helpers are P-coded.
+
+Results
+    A new run directory is created under results/matpower_flat.
+    comparison_wide.csv, comparison_long.csv, summary.csv and comparison.mat
+    preserve timings, residuals, status flags and independent feasibility checks.
+    comparison.xlsx is also written by default.
+    flat/solve_time.png and flat/max_violation.png show the method comparison;
+    editable MATLAB figure copies are saved alongside them.
+    Runtime snapshots preserve their .p extension and contain no QGS sources.
+    The random-start SEMs_AS_test entry still writes no result files.
+
+Options
+    cfg.CaseNames       Subset of names from MATPOWER_CASES.txt
+    cfg.OutputDir       Output directory
+    cfg.MakePlots       true by default
+    cfg.PlotVisible     true by default
+    cfg.WriteExcel      true by default
+    cfg.HslLibrary      Optional full path to the installed MA57/HSL library
+    cfg.SolverOptions   QGS budgets; defaults: MaxIter=999, MaxEval=1000
+    cfg.IpoptMaxIter    1000 by default
+    cfg.IpoptMaxTime    60 seconds by default
+The original PTC and GN implementations do not enforce MaxTime.
+
+Ipopt/MA57 environment
+    The bundled MEX interface targets Apple Silicon MATLAB and links to the
+    current Homebrew Ipopt installation at /opt/homebrew/opt/ipopt/lib.
+    MA57 uses the existing local HSL library. When this package stays under
+    the original QGS/standalone directory, the existing project-local library
+    is detected automatically. Otherwise set cfg.HslLibrary or the environment
+    variable QGS_HSL_LIBRARY before running.
+    The HSL library is not included in the public archive, as explained in
+    licenses/mexIPOPT_HSL.txt. Windows binaries are outside this Mac package.

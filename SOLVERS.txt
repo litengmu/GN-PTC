@@ -1,0 +1,31 @@
+Available solvers
+
+Set solver_name in SEMs_AS_test.m to one of these names:
+
+    pseudotran                          Original PTC with SER step control
+    pseudotran_qgs_gn                   Gauss-Newton PTC
+    pseudotran_qgs_gn_filter_hyst       GN-filter with curvature hysteresis
+    pseudotran_qgs_gn_filter_hyst_back  Hysteresis and adaptive GN fallback
+    pseudotran_ser                      SER
+    pseudotran_rtr                      Residual trust-region control
+    pseudotran_cn2022                   Regularized continuation Newton
+    pseudotran_wu2017                   Relative-change SER adaptation
+
+Example:
+    solver_name = 'pseudotran_ser';
+
+All eight solvers are distributed as MATLAB P-code under algorithms/pseudotran.
+Implementations and solver defaults are preserved. No restoration variants are included.
+Stopping rules differ; the entry script checks physical feasibility for
+all methods. A fixed seed gives the same random initial points.
+
+Small compatibility check: midpoint plus four seeded random starts,
+MATLAB R2025b on macOS, default solver parameters, feasibility < 2e-4:
+    SER: 5/5; RTR: 4/5; CN2022: 0/5; Wu2017: 5/5.
+CN2022 used up to 75408 accepted steps. These are interface checks,
+not a 1000-point benchmark. Windows testing is pending.
+
+Method references retained from the original implementations:
+    SER: Kelley and Keyes (1998), doi:10.1137/S0036142996304796.
+    RTR/CN2022: Luo et al. (2022), doi:10.1007/s11075-021-01112-x.
+    Wu2017: Wu et al. (2017), doi:10.1587/transfun.E100.A.619.

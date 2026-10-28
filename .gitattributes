@@ -1,0 +1,9 @@
+*.m text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.p binary
+*.mat binary
+*.mexmaca64 binary
+*.zip binary
+*.xlsx binary
+licenses/*.txt -whitespace

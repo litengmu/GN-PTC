@@ -1,0 +1,90 @@
+Built with MATLAB 25.2.0.3360999 (R2025b) Update 7
+P-code format: R2007b
+Sampling case: case9mod
+Protected files: 79
+Protected solver files: 8
+Entries: SEMs_AS_test.m, main_matpower_flat.m
+Base-model products reported by dependency analysis:
+  MATLAB
+Flat-start benchmark: 72 MATPOWER cases, PTC/GN/GN_hyst_back/Ipopt_MA57
+
+Protected-file manifest:
+algorithms/CASE_DEFINE.p
+algorithms/CASE_DEFINE_batch.p
+algorithms/dghfun.p
+algorithms/ghfun.p
+algorithms/hessfcn.p
+algorithms/odefun.p
+algorithms/pseudotran/pseudotran.p
+algorithms/pseudotran/pseudotran_cn2022.p
+algorithms/pseudotran/pseudotran_qgs_gn.p
+algorithms/pseudotran/pseudotran_qgs_gn_filter_hyst.p
+algorithms/pseudotran/pseudotran_qgs_gn_filter_hyst_back.p
+algorithms/pseudotran/pseudotran_rtr.p
+algorithms/pseudotran/pseudotran_ser.p
+algorithms/pseudotran/pseudotran_wu2017.p
+data/case9mod.p
+main/main_batch_ipopt_ma57.p
+main/main_batch_qgs.p
+main/main_compare_qgs_ipopt.p
+matpower4.1/@opf_model/add_constraints.p
+matpower4.1/@opf_model/add_costs.p
+matpower4.1/@opf_model/add_vars.p
+matpower4.1/@opf_model/build_cost_params.p
+matpower4.1/@opf_model/compute_cost.p
+matpower4.1/@opf_model/display.p
+matpower4.1/@opf_model/get.p
+matpower4.1/@opf_model/getN.p
+matpower4.1/@opf_model/get_cost_params.p
+matpower4.1/@opf_model/get_idx.p
+matpower4.1/@opf_model/get_mpc.p
+matpower4.1/@opf_model/getv.p
+matpower4.1/@opf_model/linear_constraints.p
+matpower4.1/@opf_model/opf_model.p
+matpower4.1/@opf_model/userdata.p
+matpower4.1/d2AIbr_dV2.p
+matpower4.1/d2ASbr_dV2.p
+matpower4.1/d2Ibr_dV2.p
+matpower4.1/d2Sbr_dV2.p
+matpower4.1/d2Sbus_dV2.p
+matpower4.1/dAbr_dV.p
+matpower4.1/dIbr_dV.p
+matpower4.1/dSbr_dV.p
+matpower4.1/dSbus_dV.p
+matpower4.1/e2i_data.p
+matpower4.1/e2i_field.p
+matpower4.1/ext2int.p
+matpower4.1/get_reorder.p
+matpower4.1/hasPQcap.p
+matpower4.1/idx_area.p
+matpower4.1/idx_brch.p
+matpower4.1/idx_bus.p
+matpower4.1/idx_cost.p
+matpower4.1/idx_gen.p
+matpower4.1/isload.p
+matpower4.1/loadcase.p
+matpower4.1/makeAang.p
+matpower4.1/makeApq.p
+matpower4.1/makeAvl.p
+matpower4.1/makeAy.p
+matpower4.1/makeBdc.p
+matpower4.1/makeSbus.p
+matpower4.1/makeYbus.p
+matpower4.1/mpoption.p
+matpower4.1/opf_args.p
+matpower4.1/opf_consfcn.p
+matpower4.1/opf_costfcn.p
+matpower4.1/opf_hessfcn.p
+matpower4.1/opf_setup.p
+matpower4.1/polycost.p
+matpower4.1/pqcost.p
+matpower4.1/run_userfcn.p
+matpower4.1/totcost.p
+setup_case9mod_paths.p
+setup_ipopt_ma57.p
+setup_qgs_paths.p
+utils/plot_qgs_batch_results.p
+utils/qgs_batch_initial_point.p
+utils/qgs_batch_summary.p
+utils/qgs_copy_snapshot.p
+utils/qgs_normalize_case_for_matpower41.p
