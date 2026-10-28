@@ -9,12 +9,11 @@ addpath(package_root);
 setup_case9mod_paths;
 
 %% Settings
-Npnts = 1000;
-random_seed = 20260914;
-solver_name = 'pseudotran_qgs_gn_filter_hyst';          % See SOLVERS.txt.
-% QGS and physical feasibility tolerances.
-epsilon = 1e-6;
-epsod = 2e-4;
+Npnts = 1000;                      % Number of random initial points.
+random_seed = 20260914;             % Seed for repeatable initial points.
+solver_name = 'pseudotran_qgs_gn_filter_hyst'; % Solver name; see SOLVERS.txt.
+epsilon = 1e-6;                     % Solver stopping tolerance.
+epsod = 2e-4;                       % Constraint violation threshold for feasibility.
 rng(random_seed, 'twister');
 
 global Ai Ae bi be gh_fcn hess_fcn nb nl ng nl2 tout
